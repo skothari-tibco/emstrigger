@@ -2,14 +2,15 @@
   "name": "flogo-ems-trigger",
   "type": "flogo:trigger",
   "version": "0.9.0",
-  "title": "Receive EMS SMS",
+  "title": "EMS Trigger",
   "description": "Simple EMS Trigger",
   "homepage": "https://github.com/skothari-tibco/emstrigger",
   "settings": [
     {
-      "name": "ServerURL",
+      "name": "serverURL",
       "type": "string",
-      "description": "Server URL"
+      "description": "Server URL",
+      "required": true
     },
     {
       "name": "destination",
