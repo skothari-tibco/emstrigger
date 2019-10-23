@@ -1,0 +1,36 @@
+{
+  "name": "flogo-ems-trigger",
+  "type": "flogo:trigger",
+  "version": "0.9.0",
+  "title": "EMS Trigger",
+  "description": "Simple EMS Trigger",
+  "homepage": "https://github.com/skothari-tibco/emstrigger",
+  "settings": [
+    {
+      "name": "serverURL",
+      "type": "string",
+      "description": "Server URL",
+      "required": true
+    },
+    {
+      "name": "destination",
+      "type": "string"
+    },
+    {
+      "name": "username",
+      "type": "string"
+    
+    },
+    {
+      "name": "password",
+      "type": "string"
+    }
+  ],
+  "output": [
+    {
+      "name": "data",
+      "type": "any",
+      "description": "Incoming data"
+    }
+  ]
+}
