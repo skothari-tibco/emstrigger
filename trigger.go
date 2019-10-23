@@ -27,6 +27,7 @@ func (*Factory) Metadata() *trigger.Metadata {
 func (*Factory) New(config *trigger.Config) (trigger.Trigger, error) {
 	s := &Settings{}
 	err := metadata.MapToStruct(config.Settings, s, true)
+
 	if err != nil {
 		return nil, err
 	}
@@ -52,6 +53,7 @@ func (t *Trigger) Initialize(ctx trigger.InitContext) error {
 		ctx.Logger().Error(err)
 		return err
 	}
+	t.Client = client
 
 	for _, handler := range ctx.GetHandlers() {
 		t.Handlers = append(t.Handlers, handler)
